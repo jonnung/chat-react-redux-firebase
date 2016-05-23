@@ -1,3 +1,5 @@
 node_modules/
 dist/
 plugin/
+.idea/
+bower_components

@@ -1,0 +1,27 @@
+{
+  "name": "chat-react-firebase",
+  "description": "Realtime Chat Web Application using React.js & Firebase.",
+  "main": "",
+  "authors": [
+    "jonnung <jonnung@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "firebase",
+    "chat"
+  ],
+  "homepage": "https://github.com/dalkstudy/chat-react-firebase",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "devices.css": "*",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.2"
+  }
+}
