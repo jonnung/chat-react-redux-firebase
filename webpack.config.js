@@ -4,19 +4,19 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        main: './src/main.js',
-        vendor: [
+        main: [
+            './src/main.js',
             'react',
             'react-dom'
         ]
     },
     output: {
-        path: __dirname + '/dist',
+        path: __dirname + '/dist',c
         publicPath: "/",
-        filename: '[name].bundle.js'
+        filename: 'static/js/[name].bundle.js'
     },
     resolve: {
-        modulesDirectories: ['node_modules', 'bower_components', 'bower_components/bootstrap/dist/css']
+        modulesDirectories: ['node_modules', 'src/bower_components', 'src/component']
     },
     devServer: {
         inline: true,
@@ -31,7 +31,7 @@ module.exports = {
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             },
             {
-                test: /\.js$/,
+                test: /\.jsx$/,
                 loader: 'babel',
                 exclude: /node_modules/,
                 query: {
@@ -41,15 +41,15 @@ module.exports = {
             },
             {
                 test: /\.woff$/,
-                loader: "url-loader?limit=10000&mimetype=application/font-woff&name=[path][name].[ext]"
+                loader: "url-loader?limit=10000&mimetype=application/font-woff&name=static/fonts/[name].[ext]"
             },
             {
                 test: /\.woff2$/,
-                loader: "url-loader?limit=10000&mimetype=application/font-woff2&name=[path][name].[ext]"
+                loader: "url-loader?limit=10000&mimetype=application/font-woff2&name=static/fonts/[name].[ext]"
             },
             {
                 test: /\.(eot|ttf|svg|gif|png)$/,
-                loader: "file-loader"
+                loader: "file-loader?name=static/fonts/[name].[ext]"
             }
         ]
     },
@@ -59,7 +59,7 @@ module.exports = {
             template: './src/index.html',
             inject: 'body'
         }),
-        new ExtractTextPlugin("[name].css"),
+        new ExtractTextPlugin("static/css/[name].css"),
         new webpack.ResolverPlugin(
             new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
         ),
