@@ -3,3 +3,6 @@ dist/
 plugin/
 .idea/
 bower_components
+*-compiled.js
+*-compiled.js.map
+npm-debug.log
