@@ -1,7 +1,18 @@
-require('jquery');
-require('bootstrap');
+import 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+import 'devices.css';
+import './styles/main.css';
 
-require('bootstrap/dist/css/bootstrap.min.css');
-require('devices.css');
+import React from 'react';
+import ReactDom from 'react-dom';
+import App from './container/App';
 
-require('./styles/main.css');
+
+const rootElement = document.getElementById('chat-screen');
+
+ReactDom.render(
+    <App />,
+    rootElement
+);
