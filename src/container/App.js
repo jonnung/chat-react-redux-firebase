@@ -9,17 +9,42 @@
  */
 
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import Welcome from '../components/Welcome';
 import Chat from '../components/Chat';
 
 
-export default class App extends Component {
+class App extends Component {
     render() {
+        const {dispatch, user, messages} = this.props;
         return (
             <div>
-                <Welcome />
-                <Chat />
+                /*
+                 * jsx 안에서 if-else 사용하기
+                 * https://facebook.github.io/react/tips/if-else-in-JSX.html
+                 */
+                /* {(() => {
+                     if (user.email != '') {
+                         return <Chat dispatch={ dispatch } user={ user } messages={ messages }/>;
+                     } else {
+                         return <Welcome dispatch={ dispatch } user={ user }/>;
+                     }
+                 })()} */
+                <Welcome dispatch={ dispatch } user={ user }/>
             </div>
         )
     };
-};
+}
+
+/**
+ * 전역 Redux 스토어의 상태(state)를 받아서 컴포넌트가 필요로 하는 props를 반환
+ */
+function select(global_state) {
+    return {
+        user: global_state.user,
+        messages: global_state.messages
+    };
+}
+
+// connect 함수는 props로 dispatch를 전달
+export default connect(select)(App);
