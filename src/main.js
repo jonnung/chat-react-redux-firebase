@@ -11,7 +11,7 @@ import ReactDom from 'react-dom';
 import App from './container/App';
 
 
-const rootElement = document.getElementById('chat-screen');
+const rootElement = document.getElementById('chat-main');
 
 ReactDom.render(
     <App />,

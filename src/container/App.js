@@ -10,17 +10,15 @@
 
 import React, {Component} from 'react';
 import Welcome from '../components/Welcome';
-import ChatList from '../components/ChatList';
-import MessageForm from '../components/MessageForm';
+import Chat from '../components/Chat';
 
 
 export default class App extends Component {
     render() {
         return (
-            <div className="chat-app">
+            <div>
                 <Welcome />
-                <ChatList />
-                <MessageForm />
+                <Chat />
             </div>
         )
     };
