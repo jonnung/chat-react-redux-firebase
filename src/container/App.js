@@ -9,6 +9,7 @@
  */
 
 import React, {Component} from 'react';
+import Welcome from '../components/Welcome';
 import ChatList from '../components/ChatList';
 import MessageForm from '../components/MessageForm';
 
@@ -17,6 +18,7 @@ export default class App extends Component {
     render() {
         return (
             <div className="chat-app">
+                <Welcome />
                 <ChatList />
                 <MessageForm />
             </div>

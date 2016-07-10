@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html lang="kr">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <title>Realtime Chat &lt;- React + Firebase</title>
   </head>
   <body>
-    <div class="app-container">
-      <div class="marvel-device iphone6 gold" style="width:327px; height:467px">
-        <div class="top-bar"></div>
-        <div class="sleep"></div>
-        <div class="volume"></div>
-        <div class="camera"></div>
-        <div class="sensor"></div>
-        <div class="speaker"></div>
-        <div class="screen" id="chat-screen"></div>
-        <div class="home"></div>
-        <div class="bottom-bar"></div>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">RRFC</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Introduce</a></li>
+                  <li><a href="#">Github</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">React + Redux + Firebase = Chat</h1>
+            <p class="lead" id="user-welcome">Enter your Email & Nickname and start chatting!</p>
+            <p class="lead">Welcome <b>jonnung</b></p>
+            <p class="lead" id="user-form">
+              <form class="form-inline">
+                <div class="form-group">
+                  <label for="user-email">Email</label>
+                  <input type="email" class="form-control" id="user-email">
+                </div>
+                <div class="form-group">
+                  <label for="user-nickname">Nickname</label>
+                  <input type="text" class="form-control" id="user-nickname">
+                </div>
+                <button type="submit" class="btn btn-default">Enter</button>
+              </form>
+            </p>
+
+            <div class="app-container">
+              <div class="marvel-device iphone6 gold" style="width:327px; height:467px">
+                <div class="top-bar"></div>
+                <div class="sleep"></div>
+                <div class="volume"></div>
+                <div class="camera"></div>
+                <div class="sensor"></div>
+                <div class="speaker"></div>
+                <div class="screen" id="chat-screen"></div>
+                <div class="home"></div>
+                <div class="bottom-bar"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+            </div>
+          </div>
         </div>
       </div>
     </div>
