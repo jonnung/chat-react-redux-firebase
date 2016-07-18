@@ -19,18 +19,13 @@ class App extends Component {
         const {dispatch, user, messages} = this.props;
         return (
             <div>
-                /*
-                 * jsx 안에서 if-else 사용하기
-                 * https://facebook.github.io/react/tips/if-else-in-JSX.html
-                 */
-                /* {(() => {
+                {(() => {
                      if (user.email != '') {
                          return <Chat dispatch={ dispatch } user={ user } messages={ messages }/>;
                      } else {
                          return <Welcome dispatch={ dispatch } user={ user }/>;
                      }
-                 })()} */
-                <Welcome dispatch={ dispatch } user={ user }/>
+                 })()}
             </div>
         )
     };

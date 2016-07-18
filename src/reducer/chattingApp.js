@@ -1,6 +1,6 @@
-import {REGISTER_USER, SEND_MESSAGE, LOAD_MESSAGE, NEW_MESSAGE} from './actions';
+import {REGISTER_USER, SEND_MESSAGE, LOAD_MESSAGE, NEW_MESSAGE} from '../actions/chatting';
 
-export default function reducer(state, action) {
+function chattingApp(state, action) {
     switch (action.type) {
     case REGISTER_USER:
         break;
@@ -12,6 +12,7 @@ export default function reducer(state, action) {
         break;
     default:
         return state;
-        break;
     }
-};
+}
+
+export default chattingApp;
